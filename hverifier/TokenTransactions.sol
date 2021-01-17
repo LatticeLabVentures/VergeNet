@@ -10,7 +10,7 @@ import "./Collateralized.sol";
  * @title ERC20Collateralized
  * @author Rafael Kallis <rk@rafaelkallis.com>
  */
-contract ERC20Collateralized is IERC20, Collateralized, Ownable {
+contract TokenTransactions is IERC20, Collateralized, Ownable {
   using SafeERC20 for IERC20;
 
   constructor(address baseToken, uint256 xNom, uint256 xDenom) public Collateralized(baseToken, xNom, xDenom) {}
