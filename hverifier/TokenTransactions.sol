@@ -4,13 +4,13 @@ import "openzeppelin-solidity/contracts/token/ERC20/SafeERC20.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
-import "./Collateralized.sol";
+import "./TokenReserve.sol";
 
 /**
  * @title ERC20Collateralized
  * @author Rafael Kallis <rk@rafaelkallis.com>
  */
-contract TokenTransactions is IERC20, Collateralized, Ownable {
+contract TokenTransactions is IERC20, TokenReserve, Ownable {
   using SafeERC20 for IERC20;
 
   constructor(address baseToken, uint256 xNom, uint256 xDenom) public Collateralized(baseToken, xNom, xDenom) {}
