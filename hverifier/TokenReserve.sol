@@ -6,7 +6,7 @@ import "openzeppelin-solidity/contracts/math/SafeMath.sol";
  * @title Collateralized
  * @author Rafael Kallis <rk@rafaelkallis.com>
  */
-contract Collateralized {
+contract TokenReserve {
   using SafeMath for uint256;
   
   address private _baseToken;
